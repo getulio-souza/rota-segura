@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native';
+import AnimatedLottieView from 'lottie-react-native';
 
 export default function Splash() {
   return (
     <View style={styles.container}>
-      <Text>Splash screen</Text>
+      <AnimatedLottieView source={require('../assets/loading-effect.json')} autoPlay loop/>
     </View>
   )
 }
