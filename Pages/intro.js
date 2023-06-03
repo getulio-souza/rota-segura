@@ -1,5 +1,7 @@
 import React from 'react'
-import { StyleSheet, View, Button, Text } from 'react-native';
+import { StyleSheet, View, Button, Text, TouchableHighlight } from 'react-native';
+import LoginButton from '../components/LoginButton';
+import BtnNextScreen from '../components/BtnNextScreen';
 
 export default function Intro() {
   return (
@@ -7,11 +9,10 @@ export default function Intro() {
 
       <View style={styles.introHeader}>
         <View>menu</View>
-        <View>
-        <Button style={styles.Button}
-        title='Login'
+        <LoginButton
+          text="Login"
+          color="#55B243"
         />
-        </View>
       </View>
 
       <View>
@@ -20,36 +21,68 @@ export default function Intro() {
         </Text>
       </View>
 
-      <View style={styles.stepsContainer}>
-        <Text style={styles.stepsBoxTitle}>Como funciona</Text>
+      <View style={styles.BoxContainer}>
+        <Text style={styles.BoxTitle}>Vantagens</Text>
+        <View style={styles.infoBoxContainer}>
 
-        <View style={styles.stepsBoxContainer}>
-
-          <View style={styles.stepsBox}>
+          <View style={styles.infoBox}>
             <View>Icone</View>  
               <View>
-                <Text style={styles.stepText}>Faça o seu cadastro no app</Text>
+                <Text style={styles.infoText}>Faça o seu cadastro no app</Text>
             </View> 
           </View>
 
-          <View style={styles.stepsBox}>
+          <View style={styles.infoBox}>
             <View>Icone</View>  
               <View>
-                <Text style={styles.stepText}>Consulte o despacho ou chegada da sua mercadoria</Text>
+                <Text style={styles.infoText}>Consulte o despacho ou chegada da sua mercadoria</Text>
             </View> 
           </View>
 
-          <View style={styles.stepsBox}>
+          <View style={styles.infoBox}>
             <View>Icone</View>  
               <View>
-                <Text style={styles.stepText}>Saiba se houve algum problema no meio do caminho</Text>
+                <Text style={styles.infoText}>Saiba se houve algum problema no meio do caminho</Text>
             </View> 
           </View>
-
+      </View>
       </View>
 
-      </View>
+    <View View style = {styles.BoxContainer2}>
+        <Text style={styles.BoxTitle2}>Como funciona</Text>
 
+        <View style={styles.infoBoxContainer}>
+          <View style={styles.infoBox}>
+            <View>Icone</View>  
+              <View>
+                <Text style={styles.infoText2}>Faça o seu cadastro no app</Text>
+            </View> 
+          </View>
+
+          <View style={styles.infoBox}>
+            <View>Icone</View>  
+              <View>
+                <Text style={styles.infoText2}>Consulte o despacho ou chegada da sua mercadoria</Text>
+            </View> 
+          </View>
+
+          <View style={styles.infoBox}>
+            <View>Icone</View>  
+              <View>
+                <Text style={styles.infoText2}>Saiba se houve algum problema no meio do caminho</Text>
+            </View> 
+          </View>
+      </View>
+      </View>    
+
+     
+
+      <View style={styles.footerBtn}>
+      <BtnNextScreen
+        text="Vamos começar"
+        color="#369928"
+      />
+      </View>
 
     </View>
   )
@@ -58,6 +91,7 @@ export default function Intro() {
 const styles = StyleSheet.create({
   introContainer: {
     backgroundColor: '#fff',
+    height:'100%'
   },
 
   introHeader: {
@@ -67,11 +101,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: '50px',
     backgroundColor: '#369928',
-  },
-
-  Button: {
-    maxWidth: '60px',
-    backgroundColor: '#55B243'
+    paddingLeft: 20,
+    paddingRight: 20
   },
 
   TitleBoxTitle: {
@@ -86,13 +117,19 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
 
-  stepsContainer: {
+  BoxContainer      : {
     backgroundColor: '#369928',
     height: '300px',
     paddingTop: '20px'
   },
 
-  stepsBoxTitle: {
+  BoxContainer2: {
+    backgroundColor: '#fff',
+    height: '300px',
+    paddingTop: '20px'
+  },
+
+  BoxTitle: {
     textAlign: 'center',
     fontSize: '24px',
     color: '#fff',
@@ -101,13 +138,23 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 
-  stepsBoxContainer: {
+  BoxTitle2: {
+    textAlign: 'center',
+    fontSize: '24px',
+    color: '#000',
+    maxWidth: '300px',
+    margin: 'auto',
+    fontWeight: '600',
+  },
+
+  infoBoxContainer: {
     flex: 1,
     paddingTop: '40px',
     alignItems: 'flex-start'
+
   },
 
-  stepsBox: {
+  infoBox: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -118,8 +165,22 @@ const styles = StyleSheet.create({
     paddingTop: '10px'
   },
 
-  stepText: {
+  infoText: {
     color: '#fff',
-    
-  }
+    fontWeight:'600',
+    maxWidth: 300
+  },
+
+  infoText2: {
+    color: '#000',
+    fontWeight:'600',
+    maxWidth: 300
+  },
+
+  footerBtn: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: '20px'
+  },
 })
