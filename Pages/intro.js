@@ -2,13 +2,18 @@ import React from 'react'
 import { StyleSheet, View, Button, Text, TouchableHighlight } from 'react-native';
 import LoginButton from '../components/LoginButton';
 import BtnNextScreen from '../components/BtnNextScreen';
+import Icon from 'react-native-vector-icons/FontAwesome5'
 
-export default function Intro() {
+export default function Intro({navigation}) {
   return (
     <View style={styles.introContainer}>
 
       <View style={styles.introHeader}>
-        <View>menu</View>
+        <Icon
+          name="bars"
+          size={25}
+          color="#fff"
+        />
         <LoginButton
           text="Login"
           color="#55B243"
@@ -26,23 +31,46 @@ export default function Intro() {
         <View style={styles.infoBoxContainer}>
 
           <View style={styles.infoBox}>
-            <View>Icone</View>  
+            <Icon
+              name="hourglass"
+              size={25}
+              color="#fff"
+            />  
               <View>
-                <Text style={styles.infoText}>Faça o seu cadastro no app</Text>
+                <Text style={styles.infoText}>Acompanhamento em tempo real</Text>
             </View> 
           </View>
 
           <View style={styles.infoBox}>
-            <View>Icone</View>  
+            <Icon
+              name="trash"
+              size={25}
+              color="#fff"
+            />  
               <View>
-                <Text style={styles.infoText}>Consulte o despacho ou chegada da sua mercadoria</Text>
+                <Text style={styles.infoText}>Desperdicio zero de alimentos</Text>
             </View> 
           </View>
 
           <View style={styles.infoBox}>
-            <View>Icone</View>  
+            <Icon
+              name="laptop"
+              size={25}
+              color="#fff"
+            />
               <View>
-                <Text style={styles.infoText}>Saiba se houve algum problema no meio do caminho</Text>
+                <Text style={styles.infoText}>Tecnologia de ponta</Text>
+            </View> 
+          </View>
+
+          <View style={styles.infoBox}>
+            <Icon
+              name = "truck"
+              size={25}
+              color="#fff"
+            />
+              <View>
+                <Text style={styles.infoText}>Logistica mais eficiente</Text>
             </View> 
           </View>
       </View>
@@ -53,22 +81,35 @@ export default function Intro() {
 
         <View style={styles.infoBoxContainer}>
           <View style={styles.infoBox}>
-            <View>Icone</View>  
+            <Icon
+              name="user-plus"
+              size={25}
+              color="#000"
+            />  
               <View>
                 <Text style={styles.infoText2}>Faça o seu cadastro no app</Text>
             </View> 
           </View>
 
           <View style={styles.infoBox}>
-            <View>Icone</View>  
+            <Icon
+              name="truck"
+              size={25}
+              color="#000"
+            />   
               <View>
                 <Text style={styles.infoText2}>Consulte o despacho ou chegada da sua mercadoria</Text>
             </View> 
           </View>
 
           <View style={styles.infoBox}>
-            <View>Icone</View>  
-              <View>
+            <Icon
+              name="exclamation"
+              size={25}
+              color="#000"
+              style={{paddingLeft:10}}
+            />   
+              <View style={{paddingLeft:10}}>
                 <Text style={styles.infoText2}>Saiba se houve algum problema no meio do caminho</Text>
             </View> 
           </View>
@@ -81,6 +122,7 @@ export default function Intro() {
       <BtnNextScreen
         text="Vamos começar"
         color="#369928"
+        onPress={() => navigation.navigate('Monitoramento')}
       />
       </View>
 
@@ -130,7 +172,7 @@ const styles = StyleSheet.create({
   },
 
   BoxTitle: {
-    textAlign: 'center',
+    textAlign: 'start',
     fontSize: '24px',
     color: '#fff',
     maxWidth: '300px',
@@ -149,7 +191,7 @@ const styles = StyleSheet.create({
 
   infoBoxContainer: {
     flex: 1,
-    paddingTop: '40px',
+    paddingTop: '20px',
     alignItems: 'flex-start'
 
   },
@@ -162,13 +204,13 @@ const styles = StyleSheet.create({
     gap: '20px',
     paddingLeft: '20px',
     paddingRight: '20px',
-    paddingTop: '10px'
+    paddingTop: '20px'
   },
 
   infoText: {
     color: '#fff',
     fontWeight:'600',
-    maxWidth: 250
+    maxWidth: 250,
   },
 
   infoText2: {
