@@ -1,11 +1,21 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Button, Image } from 'react-native';
 
-
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <View style={styles.container}>
-      <Text>Home screen</Text>
+      <View style={styles.logo}>
+        <Image 
+        source={require('../assets/first-logo-2.png')}
+        />
+      </View>
+      <View>
+        <Button
+          title='comecar'
+          color='#369928'
+          onPress={()=> navigation.navigate('Intro')}
+        />
+      </View>
     </View>
   )
 }
@@ -17,5 +27,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#369928'
-  }
+  },
+
+  logo: {
+    justifyContent: 'center',
+  },
 })
