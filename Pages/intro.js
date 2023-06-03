@@ -168,19 +168,19 @@ const styles = StyleSheet.create({
   infoText: {
     color: '#fff',
     fontWeight:'600',
-    maxWidth: 300
+    maxWidth: 250
   },
 
   infoText2: {
     color: '#000',
     fontWeight:'600',
-    maxWidth: 300
+    maxWidth: 250
   },
 
   footerBtn: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: '20px'
+    paddingBottom: '20px'
   },
 })
