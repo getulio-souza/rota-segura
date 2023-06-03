@@ -14,14 +14,40 @@ export default function Intro() {
         </View>
       </View>
 
-      <View style={styles.TitleBox}>
+      <View>
         <Text
           style={styles.TitleBoxTitle}>Acompanhe o envio e a entrega dos seus alimentos
         </Text>
       </View>
 
-      <View style={styles.stepsBox}>
+      <View style={styles.stepsContainer}>
         <Text style={styles.stepsBoxTitle}>Como funciona</Text>
+
+        <View style={styles.stepsBoxContainer}>
+
+          <View style={styles.stepsBox}>
+            <View>Icone</View>  
+              <View>
+                <Text style={styles.stepText}>Faça o seu cadastro no app</Text>
+            </View> 
+          </View>
+
+          <View style={styles.stepsBox}>
+            <View>Icone</View>  
+              <View>
+                <Text style={styles.stepText}>Consulte o despacho ou chegada da sua mercadoria</Text>
+            </View> 
+          </View>
+
+          <View style={styles.stepsBox}>
+            <View>Icone</View>  
+              <View>
+                <Text style={styles.stepText}>Saiba se houve algum problema no meio do caminho</Text>
+            </View> 
+          </View>
+
+      </View>
+
       </View>
 
 
@@ -48,22 +74,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#55B243'
   },
 
-  TitleBox: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: '20px',
-    paddingBottom: '20px',
-    height: '300px'
-  },
-
   TitleBoxTitle: {
     fontSize: '24px',
     textAlign: 'center',
-    color: 'green'
+    color: 'green',
+    height: '155px',
+    display: 'flex',
+    alignItems: 'center',
+    maxWidth: '300px',
+    margin: 'auto',
+    fontWeight: '600'
   },
 
-  stepsBox: {
+  stepsContainer: {
     backgroundColor: '#369928',
     height: '300px',
     paddingTop: '20px'
@@ -72,6 +95,31 @@ const styles = StyleSheet.create({
   stepsBoxTitle: {
     textAlign: 'center',
     fontSize: '24px',
-    color:'#fff'
+    color: '#fff',
+    maxWidth: '300px',
+    margin: 'auto',
+    fontWeight: '600',
+  },
+
+  stepsBoxContainer: {
+    flex: 1,
+    paddingTop: '40px',
+    alignItems: 'flex-start'
+  },
+
+  stepsBox: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: '20px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    paddingTop: '10px'
+  },
+
+  stepText: {
+    color: '#fff',
+    
   }
 })
