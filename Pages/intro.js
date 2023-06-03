@@ -1,9 +1,10 @@
 import React from 'react'
-import { StyleSheet, View, Button } from 'react-native';
+import { StyleSheet, View, Button, Text } from 'react-native';
 
 export default function Intro() {
   return (
     <View style={styles.introContainer}>
+
       <View style={styles.introHeader}>
         <View>menu</View>
         <View>
@@ -12,13 +13,25 @@ export default function Intro() {
         />
         </View>
       </View>
+
+      <View style={styles.TitleBox}>
+        <Text
+          style={styles.TitleBoxTitle}>Acompanhe o envio e a entrega dos seus alimentos
+        </Text>
+      </View>
+
+      <View style={styles.stepsBox}>
+        <Text style={styles.stepsBoxTitle}>Como funciona</Text>
+      </View>
+
+
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   introContainer: {
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
 
   introHeader: {
@@ -33,5 +46,32 @@ const styles = StyleSheet.create({
   Button: {
     maxWidth: '60px',
     backgroundColor: '#55B243'
+  },
+
+  TitleBox: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: '20px',
+    paddingBottom: '20px',
+    height: '300px'
+  },
+
+  TitleBoxTitle: {
+    fontSize: '24px',
+    textAlign: 'center',
+    color: 'green'
+  },
+
+  stepsBox: {
+    backgroundColor: '#369928',
+    height: '300px',
+    paddingTop: '20px'
+  },
+
+  stepsBoxTitle: {
+    textAlign: 'center',
+    fontSize: '24px',
+    color:'#fff'
   }
 })
