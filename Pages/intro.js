@@ -1,8 +1,10 @@
 import React from 'react'
-import { StyleSheet, View, Button, Text, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import LoginButton from '../components/LoginButton';
 import BtnNextScreen from '../components/BtnNextScreen';
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import Sidebar from '../components/drawer/Sidebar';
+// import Header from '../components/Header';
 
 export default function Intro({navigation}) {
   return (
@@ -14,6 +16,7 @@ export default function Intro({navigation}) {
           size={25}
           color="#fff"
         />
+        {/* < Sidebar/> */}
         <LoginButton
           text="Login"
           color="#55B243"
@@ -65,7 +68,7 @@ export default function Intro({navigation}) {
 
           <View style={styles.infoBox}>
             <Icon
-              name = "truck"
+              name= "truck"
               size={25}
               color="#fff"
             />
@@ -226,3 +229,5 @@ const styles = StyleSheet.create({
     paddingBottom: '20px'
   },
 })
+
+//https://reactnavigation.org/docs/drawer-navigator/
