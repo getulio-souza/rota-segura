@@ -1,12 +1,57 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, FlatList } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
+ const data = [{
+     type: 'fruta',
+     name: 'banana',
+     weight: 43
+   },
+   {
+     type: 'Verdura',
+     name: 'Brocolis',
+     weight: 15
+   },
+   {
+     type: 'Legume',
+     name: 'Tomate',
+     weight: 22
+   },
+   {
+     type: 'Legume',
+     name: 'Tomate',
+     weight: 22
+   },
+   {
+     type: 'Legume',
+     name: 'Tomate',
+     weight: 34
+   },
+ ]
+
 const TruckStatus = () => {
+
+  const item = ({item}) => {
+    return (
+      <View style={styles.statusTable}>
+        <View style={styles.tableRow}>
+          <Text>{item.type}</Text>
+        </View>
+        <View style={styles.tableRow}>
+          <Text>{item.name}</Text>
+        </View>
+        <View style={styles.tableRow}>
+          <Text>{item.weight}</Text>
+        </View>
+      </View>
+    )
+  }
+
   return (
     <View View style = {styles.mainContainer}>
       <Header></Header>
+      <View style={styles.contentContainer}>
       <View>
         <Text
           style={styles.TitleBoxTitle}>Status do veiculo
@@ -28,8 +73,8 @@ const TruckStatus = () => {
             color="#369928"
             size={30}
           />
-          <Text>Temperatura</Text>
-          <Text>10°C</Text>
+          <Text style={styles.infoStatusTitle}>Temperatura</Text>
+          <Text style={styles.infoStatusNumber}>10°C</Text>
         </View>
 
         <View style={styles.statusInfo}>
@@ -38,8 +83,8 @@ const TruckStatus = () => {
             color="#369928"
             size={30}
           />
-          <Text>Umidade</Text>
-          <Text>30%</Text>
+          <Text style={styles.infoStatusTitle}>Umidade</Text>
+          <Text style={styles.infoStatusNumber}>30%</Text>
         </View>
 
         <View style={styles.statusInfo}>
@@ -48,18 +93,44 @@ const TruckStatus = () => {
             color="#369928"
             size={30}
           />
-          <Text>Velocidade média</Text>
-          <Text>10km/h</Text>
+          <Text style={styles.infoStatusTitle}>Velocidade média</Text>
+          <Text style={styles.infoStatusNumber}>10km/h</Text>
         </View>
       </View>
 
       <View style={styles.foodContainer}>
-      <Text
-        style={styles.foodTitle}>Alimentos transportados
-      </Text>
+        <Text
+          style={styles.foodTitle}>Alimentos transportados
+        </Text>
+
+        {/* table */}
+        <View styles={styles.tableContainer}>
+          <View style={styles.statusTable}>
+
+        <View style={styles.tableRow}>
+          <Text style={styles.headerTh}>Tipo</Text>
+            </View>
+            
+        <View style={styles.tableRow}>
+          <Text style={styles.headerTh}>Nome</Text>
+            </View>
+            
+        <View style={styles.tableRow}>
+          <Text style={styles.headerTh}>Peso (KG)</Text>
+            </View>
+            
+          </View>
+          <FlatList
+            data={data}
+            renderItem={item}
+            keyExtractor={(item, index)=> index.toString()}
+          >
+          </FlatList>
+        </View>
+      </View>
+
       </View>
     </View>
-    
   )
 }
 
@@ -68,12 +139,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     height: '100%'
   },
+
+  contentContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    gap: '30px'
+  },
   
   TitleBoxTitle: {
     fontSize: '24px',
     textAlign: 'center',
     color: 'green',
-    height: '155px',
+    height: '125px',
     display: 'flex',
     alignItems: 'center',
     maxWidth: '300px',
@@ -99,8 +176,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  foodContainer:{
-    paddingTop: '40px'
+  infoStatusTitle: {
+    paddingTop: '10px'
+  },
+
+  infoStatusNumber: {
+    fontWeight: '700',
+    paddingTop:'10px'
+  },
+
+  foodContainer: {
+    paddingTop: '40px',
+    alignItems:'center'
   },
   
   foodTitle: {
@@ -110,9 +197,33 @@ const styles = StyleSheet.create({
     maxWidth: '300px',
     margin: 'auto',
     fontWeight: '600',
+    paddingBottom: '30px',
   },
 
+  tableContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   
+  tableRow: {
+    backgroundColor: '#fff',
+    width: 100,
+    height: '40px'
+  },
+
+  statusTable: {
+    flexDirection: 'row',
+    textAlign: 'center',
+    alignItems: 'center',
+  },
+  
+  headerTh: {
+    fontWeight: '700',
+    fontSize: '17px',
+    color: '#268c1b',
+    height: '40px'
+  }
 })
 
 export default TruckStatus
