@@ -6,18 +6,20 @@ import Home from "./Pages/Home";
 import Intro from "./Pages/intro";
 import Monitoramento from "./Pages/Monitoramento"
 import TruckStatus from "./Pages/TruckStatus";
+import otimizacao from "./Pages/otimizacao";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TruckStatus" screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName="Otimizacao" screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="Splash" component={Splash} /> */}
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Intro" component={Intro} />
         <Stack.Screen name="Monitoramento" component={Monitoramento} />
         <Stack.Screen name="TruckStatus" component={TruckStatus} />
+        <Stack.Screen name="Otimizacao" component={otimizacao} />
       </Stack.Navigator>
     </NavigationContainer>
   );
