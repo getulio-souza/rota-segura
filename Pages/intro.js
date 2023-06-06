@@ -3,8 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import LoginButton from '../components/LoginButton';
 import BtnNextScreen from '../components/BtnNextScreen';
 import Icon from 'react-native-vector-icons/FontAwesome5'
-import Sidebar from '../components/drawer/Sidebar';
-// import Header from '../components/Header';
+// import Sidebar from '../components/drawer/Sidebar';
 
 export default function Intro({navigation}) {
   return (

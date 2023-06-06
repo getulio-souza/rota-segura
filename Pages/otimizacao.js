@@ -3,16 +3,16 @@ import React from 'react'
 import Header from '../components/Header'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
-const otimizacao = () => {
+const Otimizacao = () => {
   return (
-    <View View style = {styles.mainContainer}>
+    <View style = {styles.mainContainer}>
       <Header></Header>
-      <View style={styles.contentContainer}>
-      <View>
-        <Text
-          style={styles.TitleBoxTitle}>Otimização de rotas
-        </Text>
-        </View>
+        <View style={styles.contentContainer}>
+          <View>
+            <Text
+              style={styles.TitleBoxTitle}>Otimização de rotas
+            </Text>
+          </View>
 
         <View style={styles.dateAndCodeContainer}>
           <Text style={styles.dateAndCodeContainerText}>Quarta, 31 Jun</Text>
@@ -197,4 +197,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default otimizacao
+export default Otimizacao
