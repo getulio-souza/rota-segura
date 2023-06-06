@@ -150,7 +150,7 @@ const Simulacoes = () => {
       {/* Button */}
       <View style={styles.simulationBtnContainer}>
       <SimulationButton
-        color="green"
+        color = "#369928"
         text='Simular'
         style={styles.simulationBtn}
       />
