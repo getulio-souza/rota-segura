@@ -73,9 +73,8 @@ const Simulacoes = () => {
             setOpen={()=> setIsOpen(!isOpen)}
             value={currentValue}
             setValue={(val) => setCurrentValue(val)}
-            style={[styles.simulationDropdown]}
+            style={styles.simulationDropdown}
             placeholder='Selecione uma quantidade'
-            // zIndex={105}
           />
         </View>
 
@@ -90,7 +89,6 @@ const Simulacoes = () => {
             setValue={(val) => setCurrentValue2(val)}
             style={styles.simulationDropdown}
             placeholder='Selecione uma faixa etária'
-            // zIndex={104}
           />
           </View>
         </View>
@@ -105,7 +103,6 @@ const Simulacoes = () => {
             setValue={(val) => setCurrentValue3(val)}
             style={styles.simulationDropdown}
             placeholder = 'Selecione uma cidade'
-            // zIndex={103}
           />
         </View>
 
@@ -121,7 +118,6 @@ const Simulacoes = () => {
             setValue={(val) => setCurrentValue4(val)}
             style={[styles.simulationDropdown, styles.productsDropdown]}
             placeholder = 'Selecione um produto'
-            // zIndex={102}
           />
           </View>
 
@@ -133,9 +129,7 @@ const Simulacoes = () => {
             value={currentValue5}
             setValue={(val) => setCurrentValue5(val)}
             style={[styles.simulationDropdown, styles.productsDropdown]}
-            placeholder='Selecione um produto'
-            zIndex={101}
-            
+            placeholder='Selecione um produto'            
           />
           </View>
 
