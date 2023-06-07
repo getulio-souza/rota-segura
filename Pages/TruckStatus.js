@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, FlatList } from 'react-native'
 import React from 'react'
-import Header from '../components/Header'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
  const data = [{
@@ -50,7 +49,6 @@ const TruckStatus = () => {
 
   return (
     <View View style = {styles.mainContainer}>
-      <Header></Header>
       <View style={styles.contentContainer}>
       <View>
         <Text

@@ -6,16 +6,6 @@ import Icon from 'react-native-vector-icons/FontAwesome5'
 export default function Intro({navigation}) {
   return (
     <View style={styles.introContainer}>
-
-      <View style={styles.introHeader}>
-        <Icon
-          name="bars"
-          size={25}
-          color="#fff"
-        />
-        {/* < Sidebar/> */}
-      </View>
-
       <View>
         <Text
           style={styles.TitleBoxTitle}>Acompanhe o envio e a entrega dos seus alimentos

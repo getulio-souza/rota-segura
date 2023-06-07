@@ -1,13 +1,10 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import Header from '../components/Header'
 import Icon from 'react-native-vector-icons/FontAwesome5'
-import { color } from 'react-native-reanimated'
 
 const Result = () => {
   return (
     <View style={styles.mainContainer}>
-      <Header></Header>
       <View>
         <Text style={styles.title}>Resultado da simulação</Text>
       </View>

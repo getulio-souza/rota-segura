@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
-import Header from '../components/Header'
 import DropDownPicker from 'react-native-dropdown-picker'
 import SimulationButton from '../components/SimulationButton'
 
@@ -56,7 +55,6 @@ const Simulacoes = ({navigation}) => {
 
   return (
     <View style={styles.mainContainer}>
-      <Header></Header>
       <View>
         <Text style={styles.title}>Simulações de consumo</Text>
       </View>

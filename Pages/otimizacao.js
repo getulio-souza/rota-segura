@@ -1,12 +1,10 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
-import Header from '../components/Header'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const Otimizacao = () => {
   return (
     <View style = {styles.mainContainer}>
-      <Header></Header>
         <View style={styles.contentContainer}>
           <View>
             <Text

@@ -6,15 +6,6 @@ import MoreInfoBtn from '../components/MoreInfo'
 const Monitoramento = ({navigation}) => {
   return (
     <View style={styles.monitoramentoContainer}>
-      <View style={styles.introHeader}>
-        <Icon
-          name="bars"
-          size={25}
-          color="#fff"
-        />
-        {/* < Sidebar/> */}
-      </View>
-
       <View>
         <Text
           style={styles.TitleBoxTitle}>Monitoramento
