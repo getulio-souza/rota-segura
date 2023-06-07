@@ -3,8 +3,7 @@ import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import MoreInfoBtn from '../components/MoreInfo'
 
-
-const Monitoramento = () => {
+const Monitoramento = ({navigation}) => {
   return (
     <View style={styles.monitoramentoContainer}>
       <View style={styles.introHeader}>
@@ -50,6 +49,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -66,6 +66,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -82,6 +83,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -98,6 +100,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -114,6 +117,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -130,6 +134,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -146,6 +151,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -162,6 +168,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -178,6 +185,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -194,6 +202,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 
@@ -210,6 +219,7 @@ const Monitoramento = () => {
           <MoreInfoBtn
             text="Saiba mais"
             color="#55B243"
+            onPress={()=> navigation.navigate('TruckStatus')}
           />
         </View>
 

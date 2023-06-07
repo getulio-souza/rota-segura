@@ -11,7 +11,7 @@ const Header = () => {
           color="#fff"
       />
       
-      <View style={styles.userLogged}>
+      {/* <View style={styles.userLogged}>
         <Icon
           name='user'
           size={25}
@@ -22,7 +22,7 @@ const Header = () => {
             size={20}
             color='#fff'
           />
-        </View>
+        </View> */}
     </View>
   )
 }

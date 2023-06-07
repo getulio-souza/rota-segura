@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import DropDownPicker from 'react-native-dropdown-picker'
 import SimulationButton from '../components/SimulationButton'
 
-const Simulacoes = () => {
+const Simulacoes = ({navigation}) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
@@ -153,6 +153,7 @@ const Simulacoes = () => {
         color = "#369928"
         text='Simular'
         style={styles.simulationBtn}
+        onPress={()=> navigation.navigate('Result')}
       />
       </View>
     </View>
