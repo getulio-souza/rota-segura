@@ -12,19 +12,6 @@ const Monitoramento = ({navigation}) => {
           size={25}
           color="#fff"
         />
-
-        <View style={styles.userLogged}>
-        <Icon
-          name='user'
-          size={25}
-          color='#fff'
-          />
-          <Icon
-            name='chevron-down'
-            size={20}
-            color='#fff'
-          />
-        </View>
         {/* < Sidebar/> */}
       </View>
 

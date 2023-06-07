@@ -1,9 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native';
-import LoginButton from '../components/LoginButton';
 import BtnNextScreen from '../components/BtnNextScreen';
 import Icon from 'react-native-vector-icons/FontAwesome5'
-// import Sidebar from '../components/drawer/Sidebar';
 
 export default function Intro({navigation}) {
   return (
@@ -16,10 +14,6 @@ export default function Intro({navigation}) {
           color="#fff"
         />
         {/* < Sidebar/> */}
-        <LoginButton
-          text="Login"
-          color="#55B243"
-        />
       </View>
 
       <View>

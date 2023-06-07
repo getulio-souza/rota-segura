@@ -4,10 +4,8 @@ import { StyleSheet, View, Button, Image } from 'react-native';
 export default function Home({navigation}) {
   return (
     <View style={styles.container}>
-      <View style={styles.logo}>
-        <Image 
-        source={require('../assets/first-logo-2.png')}
-        />
+      <View>
+      <Image source={require('../assets/first-logo.png')}/>
       </View>
       <View>
         <Button
@@ -26,10 +24,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#369928'
+    // backgroundColor: '#369928'
   },
 
-  logo: {
-    justifyContent: 'center',
-  },
+  // logo: {
+  //   justifyContent: 'center',
+  // },
 })
