@@ -86,7 +86,7 @@ const Otimizacao = () => {
           <Image
           source={require('../assets/maps.png')}
         />
-        <Text>mapa entra aqui</Text>
+        <Text style={styles.maptitle}>mapa entra aqui</Text>
         </View>
     </View>
   ) 
@@ -190,9 +190,17 @@ const styles = StyleSheet.create({
   },
 
   mapContainer: {
-    width: '100',
-    height: '100',
+    width: '100%',
+    height: '100%',
+    backgroundColor:'#aaaaaa'
+  },
+
+  maptitle: {
+    display:'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
+
 })
 
 export default Otimizacao
