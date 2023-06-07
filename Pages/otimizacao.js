@@ -1,20 +1,64 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Image, Button, TouchableOpacity} from 'react-native'
+import React, {useEffect, useState } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import apiOtimizazao from '../services/api'
 
 const Otimizacao = () => {
+
+  const [horaColeta, setHoraColeta] = useState();
+  // const [jsonData, setJsonData] = useState()
+
+  const [time, setTime] = useState("");
+  const [codigo, setCodigo] = useState("");
+  const [quantidade, setQuantidade] = useState("");
+  const [servico, setServico] = useState("");
+  const [host, setHost] = useState("");
+  const [errorMessage, setErrorMessage] = useState("")
+
+  //conver
+
+  let token = '1abcd00b2731640e886fb41a8a9671ad1434c599dbaa0a0de9a5aa619f29a83f&codigo=LX002249507BR';
+   
+      const dataFetching =  () => {
+        fetch("https://api.linketrack.com/track/json?user=teste&token=1abcd00b2731640e886fb41a8a9671ad1434c599dbaa0a0de9a5aa619f29a83f&codigo=LX002249507BR",
+         ).then(response => response.json())
+          .then(data => {
+            try {
+              setErrorMessage("")
+              setTime(data.time)
+              setServico(data.servico)
+              setCodigo(data.codigo)
+          }
+          catch (error) {
+              setErrorMessage("Muitos pedidos. Tente Novamente")
+              console.log(setErrorMessage)
+          }
+          })
+        .catch(error => console.error('erro fetching JSON:', error))
+      }
+      dataFetching()
+  
   return (
     <View style = {styles.mainContainer}>
         <View style={styles.contentContainer}>
-          <View>
+          <View style={{justifyContent:'center', alignItems:'center'}}>
             <Text
               style={styles.TitleBoxTitle}>Otimização de rotas
-            </Text>
+          </Text>
+          <TouchableOpacity
+            style={styles.checkBtnContainer}
+            onPress={dataFetching}
+          >
+            <Text style={styles.checkBtn}>consultar</Text>
+          </TouchableOpacity>
+
+          <Text style={{color:'red'}}>{errorMessage}</Text>
           </View>
 
         <View style={styles.dateAndCodeContainer}>
-          <Text style={styles.dateAndCodeContainerText}>Quarta, 31 Jun</Text>
-          <Text style={styles.dateAndCodeContainerText}>Código: 432kj42</Text>
+          {/* <Text style={styles.dateAndCodeContainerText}>Quarta, 31 Jun</Text> */}
+          <Text style={styles.dateAndCodeContainerText}>Quarta, 7 Jun</Text>
+          <Text style={styles.dateAndCodeContainerText}>{codigo}</Text>
         </View>
 
         <View style={styles.subTitleContainer}>
@@ -27,10 +71,10 @@ const Otimizacao = () => {
             <Icon/>
             <View style={styles.timeStep}>
               <View style={styles.timeStepLeft}>
-              <Text style={styles.timeStepTitle}>Coleta realizada</Text>
+              <Text style={styles.timeStepTitle}>{servico} </Text>
               <Text style={styles.timeStepSubTitle}>xxxxxxxxx de São Paulo</Text>
               </View>
-              <Text style={styles.timeStepRight}>12:20</Text>
+              <Text style={styles.timeStepRight}>{time}</Text>
             </View>  
           </View>
           
@@ -38,10 +82,10 @@ const Otimizacao = () => {
             <Icon/>
             <View style={styles.timeStep}>
               <View style={styles.timeStepLeft}>
-              <Text style={styles.inativeStatus}>Caminhão em transporte</Text>
+              <Text style={styles.inativeStatus}>{servico} </Text>
               <Text style={styles.inativeStatus}>xxxxxxxxx de Rio de Janeiro</Text>
               </View>
-              <Text style={[styles.timeStepRight, styles.inativeStatus]}>13:40</Text>
+              <Text style={[styles.timeStepRight, styles.inativeStatus]}>{time}</Text>
             </View>  
           </View>
           
@@ -49,10 +93,10 @@ const Otimizacao = () => {
             <Icon/>
             <View style={styles.timeStep}>
               <View style={styles.timeStepLeft}>
-              <Text style={styles.inativeStatus}>Coleta realizada</Text>
+              <Text style={styles.inativeStatus}>{servico}</Text>
               <Text style={styles.inativeStatus}>xxxxxxxxx de São Paulo</Text>
               </View>
-              <Text style={[styles.timeStepRight, styles.inativeStatus]}>15:30</Text>
+              <Text style={[styles.timeStepRight, styles.inativeStatus]}>{time}</Text>
             </View> 
           </View>
           
@@ -60,10 +104,10 @@ const Otimizacao = () => {
             <Icon/>
             <View style={styles.timeStep}>
               <View style={styles.timeStepLeft}>
-              <Text style={styles.inativeStatus}>Coleta realizada</Text>
+              <Text style={styles.inativeStatus}>{servico}</Text>
               <Text style={styles.inativeStatus}>xxxxxxxxx de São Paulo</Text>
               </View>
-              <Text style={[styles.timeStepRight, styles.inativeStatus]}>18:20</Text>
+              <Text style={[styles.timeStepRight, styles.inativeStatus]}>{time}</Text>
             </View> 
           </View>
         </View>
@@ -113,6 +157,18 @@ const styles = StyleSheet.create({
     maxWidth: '300px',
     margin: 'auto',
     fontWeight: '600'
+  },
+
+  checkBtnContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  
+  checkBtn: {
+    padding: '10px',
+    backgroundColor: 'green',
+    color: '#fff',
+    borderRadius:'10px'
   },
 
   dateAndCodeContainer: {

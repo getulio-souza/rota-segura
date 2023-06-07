@@ -22,7 +22,7 @@ export default function Home({navigation}) {
           />
           <HomeBtn
             text='Simulações'
-            onPress={()=> navigation.navigate('Simulacoes')}
+            onPress={() => navigation.navigate('Simulacoes')}
           />
         </View>
       </View>
