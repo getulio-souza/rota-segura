@@ -1,21 +1,13 @@
-import { View, Text, StyleSheet, Image, Button, TouchableOpacity} from 'react-native'
-import React, {useEffect, useState } from 'react'
+import { View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native'
+import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome5'
-import apiOtimizazao from '../services/api'
+import map from '../assets/maps.png'
 
 const Otimizacao = () => {
-
-  const [horaColeta, setHoraColeta] = useState();
-  // const [jsonData, setJsonData] = useState()
-
   const [time, setTime] = useState("");
   const [codigo, setCodigo] = useState("");
-  const [quantidade, setQuantidade] = useState("");
   const [servico, setServico] = useState("");
-  const [host, setHost] = useState("");
   const [errorMessage, setErrorMessage] = useState("")
-
-  //conver
 
   let token = '1abcd00b2731640e886fb41a8a9671ad1434c599dbaa0a0de9a5aa619f29a83f&codigo=LX002249507BR';
    
@@ -126,12 +118,10 @@ const Otimizacao = () => {
         </View>
       </View>
       {/* Mapa */}
-        <View style={styles.mapContainer}>
-          <Image
-          source={require('../assets/maps.png')}
-        />
+        {/* <View>
+          <Image source={map}/>
         <Text style={styles.maptitle}>mapa entra aqui</Text>
-        </View>
+        </View> */}
     </View>
   ) 
 }
@@ -243,12 +233,6 @@ const styles = StyleSheet.create({
   addressInfo: {
     fontSize: '12px',
     color:'#2a2a2a'
-  },
-
-  mapContainer: {
-    width: '100%',
-    height: '100%',
-    backgroundColor:'#aaaaaa'
   },
 
   maptitle: {
