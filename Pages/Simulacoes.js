@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, InputAccessoryView } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
 import Header from '../components/Header'
 import DropDownPicker from 'react-native-dropdown-picker'
