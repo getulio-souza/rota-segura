@@ -141,17 +141,17 @@ const styles = StyleSheet.create({
   contentContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    gap: '30px'
+    gap: 30
   },
   
   TitleBoxTitle: {
-    fontSize: '24px',
+    fontSize: 24,
     textAlign: 'center',
     color: 'green',
-    height: '125px',
+    height: 125,
     display: 'flex',
     alignItems: 'center',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600'
   },
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     flexWrap: 'wrap',
-    paddingTop: '50px'
+    paddingTop: 50
   },
 
   statusInfo: {
@@ -175,27 +175,27 @@ const styles = StyleSheet.create({
   },
 
   infoStatusTitle: {
-    paddingTop: '10px'
+    paddingTop: 10
   },
 
   infoStatusNumber: {
     fontWeight: '700',
-    paddingTop:'10px'
+    paddingTop:10
   },
 
   foodContainer: {
-    paddingTop: '40px',
+    paddingTop: 40,
     alignItems:'center'
   },
   
   foodTitle: {
-    fontSize: '24px',
+    fontSize: 24,
     textAlign: 'center',
     color: 'green',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600',
-    paddingBottom: '30px',
+    paddingBottom: 30,
   },
 
   tableContainer: {
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   tableRow: {
     backgroundColor: '#fff',
     width: 100,
-    height: '40px'
+    height: 40
   },
 
   statusTable: {
@@ -218,9 +218,9 @@ const styles = StyleSheet.create({
   
   headerTh: {
     fontWeight: '700',
-    fontSize: '17px',
+    fontSize: 17,
     color: '#268c1b',
-    height: '40px'
+    height: 40
   }
 })
 

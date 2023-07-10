@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: '50px',
+    height: 50,
     backgroundColor: '#369928',
     paddingLeft: 20,
     paddingRight: 20
@@ -232,13 +232,13 @@ const styles = StyleSheet.create({
   },
 
   TitleBoxTitle: {
-    fontSize: '24px',
+    fontSize: 24,
     textAlign: 'center',
     color: 'green',
-    height: '155px',
+    height: 155,
     display: 'flex',
     alignItems: 'center',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600'
   },

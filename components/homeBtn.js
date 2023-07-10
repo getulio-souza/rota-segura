@@ -12,12 +12,12 @@ const HomeBtn = props => {
 
 const styles = StyleSheet.create({
   button: {
-    width: '200px',
-    height: '55px',
+    width: 200,
+    height: 55,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:'#fff'
+    // backgroundColor:'white'
   },
 
   text: {

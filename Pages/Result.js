@@ -111,13 +111,13 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: '24px',
+    fontSize: 24,
     textAlign: 'center',
     color: '#369928',
-    height: '100px',
+    height: 100,
     display: 'flex',
     alignItems: 'center',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600'
   },
@@ -126,46 +126,46 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    paddingLeft: '40px',
-    paddingRight: '40px',
+    paddingLeft: 40,
+    paddingRight: 40,
     textAlign:'center',
-    padding: '10px 20px',
-    borderRadius: '10px'
+    padding: 120,
+    borderRadius: 10
   },
 
   dataBox: {
     backgroundColor: 'red',
-    width:'300px'
+    width:300
   },
 
   dataTitle: {
     color: '#369928',
-    fontSize: '14px',
+    fontSize: 14,
     fontWeight:'600'
   },
 
   dataInfo: {
     color: '#2a2a2a',
-    fontSize: '14px'
+    fontSize: 14
   },
 
   foodDataContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems:'flex-start',
-    paddingTop:'40px'
+    paddingTop:40
   },
 
   foodTitle: {
     flexDirection: 'row',
-    gap: '20px',
-    paddingBottom: '10px',
-    fontSize: '20px',
+    gap: 20,
+    paddingBottom: 10,
+    fontSize: 20,
     alignItems:'center'
   },
 
   foodSubtitle: {
-    fontSize: '17px',
+    fontSize: 17,
     fontWeight: '600',
     color: '#369928'
   },
@@ -176,15 +176,15 @@ const styles = StyleSheet.create({
 
   foodType: {
     flexDirection: 'row',
-    gap: '10px',
-    paddingLeft: '30px',
-    paddingBottom:'5px'
+    gap: 10,
+    paddingLeft: 30,
+    paddingBottom:5
   },
 
   foodTypeTitle: {
     color: '#369928',
     fontWeight: '600',
-    fontSize: '15px'
+    fontSize: 15
   },
 
   foodTypeTitleInfo: {
@@ -196,11 +196,11 @@ const styles = StyleSheet.create({
   },
 
   verdurasTitle: {
-    paddingTop:'20px'
+    paddingTop:20
   },
 
   carnesTitle: {
-    paddingTop: '20px'
+    paddingTop: 20
   },
 
 })

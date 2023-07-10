@@ -12,8 +12,8 @@ const SimulationButton = props => {
 
 const styles = StyleSheet.create({
   button: {
-    width: '130px',
-    height: '35px',
+    width: 130,
+    height:35,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',

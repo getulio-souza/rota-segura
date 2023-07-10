@@ -11,13 +11,13 @@ const Title = () => {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: '24px',
+    fontSize:24,
     textAlign: 'center',
     color: 'green',
-    height: '155px',
+    height: 155,
     display: 'flex',
     alignItems: 'center',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600'
   },

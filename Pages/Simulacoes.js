@@ -1,57 +1,15 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React, {useState} from 'react'
-import DropDownPicker from 'react-native-dropdown-picker'
-import SimulationButton from '../components/SimulationButton'
+import { View, Text, StyleSheet } from "react-native";
+import React, { useState } from "react";
+// import DropDownPicker from 'react-native-dropdown-picker'
+import SimulationButton from "../components/SimulationButton";
+import { Picker } from "@react-native-picker/picker";
 
-const Simulacoes = ({navigation}) => {
+const Simulacoes = ({ navigation }) => {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [isOpen3, setIsOpen3] = useState(false);
-  const [isOpen4, setIsOpen4] = useState(false);
-  const [isOpen5, setIsOpen5] = useState(false);
-  const [isOpen6, setIsOpen6] = useState(false);
-
-  const [currentValue, setCurrentValue] = useState();
-  const [currentValue2, setCurrentValue2] = useState();
-  const [currentValue3, setCurrentValue3] = useState();
-  const [currentValue4, setCurrentValue4] = useState();
-  const [currentValue5, setCurrentValue5] = useState();
-  const [currentValue6, setCurrentValue6] = useState();
-
-  const product = [
-    { label: 'produto 1', value: 'produto 1' },
-    { label: 'produto 2', value: 'produto 2' },
-    { label: 'produto 3', value: 'produto 3' },
-    { label: 'produto 4', value: 'produto 4' },
-    { label: 'produto 5', value: 'produto 5' },
-    { label: 'produto 6', value: 'produto 6' }
-  ];
-
-  const people = [
-    { label: '1-499', value: '1-499' },
-    { label: '500-499', value: '500-499' },
-    { label: '501-999', value: '501-999' },
-    { label: '1000-1999', value: '1000-1999' },
-  ];
-
-  const ages = [
-    { label: '18-30', value: '18-30' },
-    { label: '31-40', value: '31-40' },
-    { label: '41-50', value: '41-50' },
-    { label: '51-60', value: '51-60' },
-    { label: '61-70', value: '61-70' },
-  ];
-
-  const countries = [
-    { label: 'Sao Paulo', value: 'Sao Paulo' },
-    { label: 'Rio de Janeiro', value: 'Rio de Janeiro' },
-    { label: 'Minas Gerais', value: 'Minas Gerais' },
-    { label: 'Mato Grosso', value: 'Mato Grosso' },
-    { label: 'Goias', value: 'Goias' },
-    { label: 'Recife', value: 'Recife' },
-    { label: 'Bahia', value: 'Bahia' },
-  ];
+  const [selectedRange, setSelectedRange] = useState();
+  const [selectedAge, setSelectedAge] = useState();
+  const [selectedCountry, setSelectedCountry] = useState();
+  const [selectedProduct, setSelectedProduct] = useState();
 
   return (
     <View style={styles.mainContainer}>
@@ -59,172 +17,165 @@ const Simulacoes = ({navigation}) => {
         <Text style={styles.title}>Simulações de consumo</Text>
       </View>
       <View>
-        <Text style={styles.subtitle}>É importante que seu cliente conheça bem seu público alvo para que você possa fazer a simulação de consumo</Text>
+        <Text style={styles.subtitle}>
+          É importante que seu cliente conheça bem seu público alvo para que
+          você possa fazer a simulação de consumo
+        </Text>
       </View>
 
       <View style={styles.formContainer}>
-        <View style={styles.inputContainer}>
+        <View>
           <Text style={styles.inputTitle}>Quantidade de pessoas:</Text>
-          <DropDownPicker
-            items={people}
-            open={isOpen}
-            setOpen={()=> setIsOpen(!isOpen)}
-            value={currentValue}
-            setValue={(val) => setCurrentValue(val)}
-            style={styles.simulationDropdown}
-            placeholder='Selecione uma quantidade'
-          />
+          <Picker
+            style={styles.input}
+            selectedValue={selectedRange}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedRange(itemValue)
+            }
+          >
+            <Picker.Item label="1-499" value="1-499" />
+            <Picker.Item label="500-499" value="500-499" />
+            <Picker.Item label="501-999" value="501-999" />
+            <Picker.Item label="1000-1999" value="1000-1999" />
+          </Picker>
         </View>
 
-        <View style={styles.inputContainer}>
+        <View>
           <Text style={styles.inputTitle}>Media de idade</Text>
-          <View styles={{paddingRight:'40px'}}>
-          <DropDownPicker
-            items={ages}
-            open={isOpen2}
-            setOpen={()=> setIsOpen2(!isOpen2)}
-            value={currentValue2}
-            setValue={(val) => setCurrentValue2(val)}
-            style={styles.simulationDropdown}
-            placeholder='Selecione uma faixa etária'
-          />
+          <View>
+            <Picker
+              style={styles.input}
+              selectedValue={selectedAge}
+              onValueChange={(itemValue, itemIndex) =>
+                setSelectedAge(itemValue)
+              }
+            >
+              <Picker.Item label="18-30" value="18-30" />
+              <Picker.Item label="31-40" value="31-40" />
+              <Picker.Item label="51-60" value="51-60" />
+              <Picker.Item label="61-70" value="61-70" />
+              <Picker.Item label="71-80" value="71-80" />
+              <Picker.Item label="81-90" value="81-90" />
+              <Picker.Item label="91-100" value="91-101" />
+            </Picker>
           </View>
         </View>
 
-        <View style={styles.inputContainer}>
+        <View>
           <Text style={styles.inputTitle}>Cidade</Text>
-          <DropDownPicker
-            items={countries}
-            open={isOpen3}
-            setOpen={() => setIsOpen3(!isOpen3)}
-            value={currentValue3}
-            setValue={(val) => setCurrentValue3(val)}
-            style={styles.simulationDropdown}
-            placeholder = 'Selecione uma cidade'
-          />
         </View>
-
-        <View style={styles.inputContainer}>
+        <Picker
+        style={styles.input}
+          selectedValue={selectedCountry}
+          onValueChange={(itemValue, itemIndex) =>
+            setSelectedCountry(itemValue)
+          }
+        >
+          <Picker.Item label="Sao Paulo" value="Sao Paulo" />
+          <Picker.Item label="Rio de Janeiro" value="Rio de Janeiro" />
+          <Picker.Item label="Minas Gerais" value="Minas Gerais" />
+          <Picker.Item label="Mato Grosso" value="Mato Grosso" />
+          <Picker.Item label="Goias" value="Goias" />
+          <Picker.Item label="Recife" value="Recife" />
+          <Picker.Item label="Bahia" value="Bahia" />
+        </Picker>
+        <View>
           <Text style={styles.inputTitle}>Principais produtos:</Text>
 
           <View style={styles.simulationDropdownContainer}>
-          <DropDownPicker
-            items={product}
-            open={isOpen4}
-            setOpen={() => setIsOpen4(!isOpen4)}
-            value={currentValue4}
-            setValue={(val) => setCurrentValue4(val)}
-            style={[styles.simulationDropdown, styles.productsDropdown]}
-            placeholder = 'Selecione um produto'
-          />
-          </View>
-
-          <View View style={styles.simulationDropdownContainer}>
-          <DropDownPicker
-            items={product}
-            open={isOpen5}
-            setOpen={() => setIsOpen5(!isOpen5)}
-            value={currentValue5}
-            setValue={(val) => setCurrentValue5(val)}
-            style={[styles.simulationDropdown, styles.productsDropdown]}
-            placeholder='Selecione um produto'            
-          />
-          </View>
-
-          <View View style={styles.simulationDropdownContainer}>
-          <DropDownPicker
-            items={product}
-            open={isOpen6}
-            setOpen={() => setIsOpen6(!isOpen6)}
-            value={currentValue6}
-            setValue={(val) => setCurrentValue6(val)}
-            style={[styles.simulationDropdown, styles.productsDropdown]}
-            placeholder = 'Selecione um produto'
-          />
+            <Picker
+              style={styles.input}
+              selectedValue={selectedProduct}
+              onValueChange={(itemValue, itemIndex)=> setSelectedCountry(intemValue)}
+            >
+              <Picker.Item label="produto 1" value="producto 1"/>
+              <Picker.Item label="produto 2" value="producto 2"/>
+              <Picker.Item label="produto 3" value="producto 3"/>
+              <Picker.Item label="produto 4" value="producto 4"/>
+              <Picker.Item label="produto 5" value="producto 5"/>
+            </Picker>
           </View>
         </View>
       </View>
 
       {/* Button */}
       <View style={styles.simulationBtnContainer}>
-      <SimulationButton
-        color = "#369928"
-        text='Simular'
-        style={styles.simulationBtn}
-        onPress={()=> navigation.navigate('Result')}
-      />
+        <SimulationButton
+          color="#369928"
+          text="Simular"
+          style={styles.simulationBtn}
+          onPress={() => navigation.navigate("Result")}
+        />
       </View>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#fff',
-    height: '100%'
+    backgroundColor: "#fff",
+    height: "100%",
   },
 
   title: {
-    fontSize: '24px',
-    textAlign: 'center',
-    color: 'green',
-    height: '100px',
-    display: 'flex',
-    alignItems: 'center',
-    maxWidth: '300px',
-    margin: 'auto',
-    fontWeight: '600'
+    fontSize: 24,
+    textAlign: "center",
+    color: "green",
+    height: "100",
+    display: "flex",
+    alignItems: "center",
+    maxWidth: "300",
+    fontWeight: "600",
+    margin:'auto'
   },
 
   subtitle: {
-    fontSize: '15px',
-    textAlign: 'center',
-    height: '125px',
-    display: 'flex',
-    alignItems: 'center',
-    maxWidth: '300px',
+    fontSize: 15,
+    textAlign: "center",
+    height: 125,
+    display: "flex",
+    alignItems: "center",
+    maxWidth: 300,
+    height: 0,
     margin: 'auto',
-    height: '0px'
+    paddingTop:40
   },
 
   formContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    paddingLeft: '40px',
-    paddingRight: '40px',
-    paddingTop:'80px'
-  },
-
-  inputContainer: {
-    paddingBottom: '15px',
+    display: "flex",
+    gap:10,
+    justifyContent: "center",
+    paddingLeft: 40,
+    paddingRight: 40,
+    paddingTop: 80,
   },
 
   inputTitle: {
-    paddingBottom: '10px',
-    color: '#369928',
-    fontWeight:'700'
+    color: "#369928",
+    fontWeight: "700",
+  },
+
+  input: {
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: '#000',
   },
 
   simulationDropdownContainer: {
-    paddingBottom:'20px'
+    paddingBottom: 20,
   },
 
   simulationDropdown: {
-    minHeight: '40px',
-  },
-
-  productsDropdown: {
-    paddingBottom:'10px'
+    minHeight: 40,
   },
 
   simulationBtnContainer: {
-    display: 'flex',
-    justifyContent:'center',
-    alignItems: 'center',
-    margin: '0 auto',
-    paddingBottom:'20px'
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingBottom: 20,
   },
-  
-})
+});
 
-export default Simulacoes
+export default Simulacoes;

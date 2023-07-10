@@ -12,8 +12,8 @@ const BtnNextScreen = props => {
 
 const styles = StyleSheet.create({
   button: {
-    width: '192px',
-    height: '51px',
+    width: 192,
+    height: 51,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',

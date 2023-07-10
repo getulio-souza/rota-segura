@@ -127,57 +127,57 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: '50px',
+    height: 50,
     backgroundColor: '#369928',
     paddingLeft: 20,
     paddingRight: 20
   },
 
   TitleBoxTitle: {
-    fontSize: '24px',
+    fontSize: 24,
     textAlign: 'center',
     color: 'green',
-    height: '155px',
+    height: 155,
     display: 'flex',
     alignItems: 'center',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600'
   },
 
   BoxContainer      : {
     backgroundColor: '#369928',
-    height: '300px',
-    paddingTop: '20px'
+    height: 300,
+    paddingTop: 20
   },
 
   BoxContainer2: {
     backgroundColor: '#fff',
-    height: '300px',
-    paddingTop: '20px'
+    height: 300,
+    paddingTop: 20
   },
 
   BoxTitle: {
     textAlign: 'start',
-    fontSize: '24px',
+    fontSize: 24,
     color: '#fff',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600',
   },
 
   BoxTitle2: {
     textAlign: 'center',
-    fontSize: '24px',
+    fontSize: 24,
     color: '#000',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600',
   },
 
   infoBoxContainer: {
     flex: 1,
-    paddingTop: '20px',
+    paddingTop: 20,
     alignItems: 'flex-start'
 
   },
@@ -187,10 +187,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    gap: '20px',
-    paddingLeft: '20px',
-    paddingRight: '20px',
-    paddingTop: '20px'
+    gap: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 20
   },
 
   infoText: {
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: '20px'
+    paddingBottom: 20
   },
 })
 

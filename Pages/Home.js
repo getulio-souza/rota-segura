@@ -14,7 +14,8 @@ export default function Home({navigation}) {
         <View style={styles.btnContainer}>
           <HomeBtn
             text='Monitoramento'
-            onPress={()=> navigation.navigate('Monitoramento')}
+            onPress={() => navigation.navigate('Monitoramento')}
+            style={{backgroundColor:'#fff'}}
           />
           <HomeBtn
             text='Otimização de rotas'
@@ -40,8 +41,8 @@ const styles = StyleSheet.create({
   },
 
   logoTitle: {
-    fontSize: '40px',
-    paddingBottom: '40px',
+    fontSize: 40,
+    paddingBottom: 40,
     color: '#fff',
     textTransform: 'uppercase',
     fontWeight:'900'
@@ -52,15 +53,15 @@ const styles = StyleSheet.create({
   },
 
   titleHome: {
-    fontSize: '30px',
-    maxWidth:'300px',
+    fontSize: 30,
+    maxWidth:300,
     color:'#fff',
     textAlign: 'center',
-    paddingBottom: '40px',
+    paddingBottom: 40,
   },
 
   btnContainer: {
     margin:'auto',
-    gap:'20px'
+    gap:20
   }
 })

@@ -133,18 +133,18 @@ const styles = StyleSheet.create({
   },
 
   contentContainer: {
-    paddingLeft: '40px',
-    paddingBottom: '20px',
+    paddingLeft: 40,
+    paddingBottom: 20,
   },
 
   TitleBoxTitle: {
-    fontSize: '24px',
+    fontSize: 24,
     textAlign: 'center',
     color: 'green',
-    height: '125px',
+    height: 125,
     display: 'flex',
     alignItems: 'center',
-    maxWidth: '300px',
+    maxWidth: 300,
     margin: 'auto',
     fontWeight: '600'
   },
@@ -155,14 +155,14 @@ const styles = StyleSheet.create({
   },
   
   checkBtn: {
-    padding: '10px',
+    padding: 10,
     backgroundColor: 'green',
     color: '#fff',
-    borderRadius:'10px'
+    borderRadius:10
   },
 
   dateAndCodeContainer: {
-    paddingBottom: '20px'
+    paddingBottom: 20
   },
 
   dateAndCodeContainerText: {
@@ -171,28 +171,28 @@ const styles = StyleSheet.create({
   },
 
   subTitleContainer: {
-    paddingBottom: '20px',
+    paddingBottom: 20,
   },
 
   subTitle: {
-    fontSize: '18px',
+    fontSize: 18,
     fontWeight: '700'
   },
 
   routeContainer: {
-    paddingBottom: '20px'
+    paddingBottom: 20
   },
 
   routeContainerBox: {
-    paddingBottom: '20px'
+    paddingBottom: 20
   },
 
   timeStep: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems:'center',
-    gap: '20px',
-    paddingBottom: '20px'
+    gap: 20,
+    paddingBottom: 20
   },
 
   timeStepLeft: {
@@ -206,32 +206,32 @@ const styles = StyleSheet.create({
 
   timeStepTitle: {
     fontWeight: '600',
-    fontSize:'16px'
+    fontSize:16
   },
 
   timeStepSubTitle: {
     fontWeight: '600',
-    fontSize: '12px'
+    fontSize: 12
   },
 
   timeStepRight: {
-    paddingRight: '40px',
+    paddingRight: 40,
     fontWeight: '600',
   },
 
   addressContainer: {
-    paddingTop: '20px',
+    paddingTop: 20,
     flexDirection: 'row',
-    gap: '10px'
+    gap: 10
   },
 
   addressTitle: {
-    fontSize: '16px',
+    fontSize: 16,
     fontWeight:'600'
   },
 
   addressInfo: {
-    fontSize: '12px',
+    fontSize: 12,
     color:'#2a2a2a'
   },
 
@@ -240,7 +240,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   }
-
 })
 
 export default Otimizacao
